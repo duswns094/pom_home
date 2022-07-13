@@ -1,0 +1,27 @@
+<a href="#" >
+    <div class="thmb">
+        <img src="{{ presentation.image.url }}" alt="">
+    </div>
+    <div class="inner">
+        <p class="title">{{ presentation.name }}<span class="txt-point"> | {{ presentation.place }}</span></p>
+        <div class="stxt">
+            <p><b>[일시]</b> {{ presentation.time }}
+              <br/>
+            <b>[장소]</b> {{ presentation.place }}</p>
+        </div>
+    </div>
+    {% if presentation.is_opened %}
+
+    <div class="pre_btn pc_img">
+        <div class="btn_rea">
+            <button type="button" href="#"  class="btn_type btn_w100 pomblue arow_r"><span>예약하기</span></button>
+        </div>
+    </div>
+    {% else %}
+    <div class="pre_btn pc_img">
+        <div class="btn_rea">
+            <button type="button" href="/" class="btn_type btn_w100 gray arow_r"><span>예약마감</span></button>
+        </div>
+    </div>
+    {% endif %}
+</a>

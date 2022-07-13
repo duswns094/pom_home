@@ -1,0 +1,21 @@
+{% if forloop.counter > 12 %}
+    <div class="col-lg-3 col-md-4 teachers-item filter-{{teacher.subject}} js-load">
+{% else %}
+    <div class="col-lg-3 col-md-4 teachers-item filter-{{teacher.subject}} js-load active">
+{% endif %}
+    <div class="teachers-wrap">
+        <div style="position: absolute;">
+            <h5>{{ teacher.name | truncatechars:8 }}T</h5>
+            <p>{{ teacher.get_subject_display }}</p>
+        </div>
+        <img src="{{ teacher.image.url }}" class="img-fluid" alt="">
+        <div class="teachers-info">
+            <h4>{{ teacher.name | truncatechars:8 }} 선생님</h4>
+            <p>{{ teacher.description|linebreaks }}</p>
+            <div class="teachers-links">
+              <a href="{{ teacher.poster.url }}" data-gallery="teachersGallery" class="teachers-lightbox" ><i class="bx bx-plus"></i></a>
+              <a href="teachers-details.html" class="teachers-details-lightbox" data-glightbox="type: external" title="teachers Details"><i class="bx bx-link"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

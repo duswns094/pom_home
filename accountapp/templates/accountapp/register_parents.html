@@ -1,0 +1,144 @@
+{% extends "base_sub.html" %}
+{% load static %}
+
+{% block title %} 홈 {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<script src="{% static 'assets/js/jquery-1.9.1.min.js' %}"></script>
+<script src="{% static 'assets/js/register.js' %}"></script>
+
+
+	<div class="login_wrap">
+	    <div class="sub_container">
+	    	<div class="sub_area">
+	    		<h1 class="sub_h1">학부모  등록하기</h1>
+		        <div class="join_center">
+		            <div class="join_tit_p font_tit_p">
+		                 <p class="asterisk"> <em class="cl_pomgreen">자녀의 학원 정보(이름)가 정확히 일치</em>하여야 회원가입이 가능합니다.</p>
+                    <p class="asterisk"> <em class="cl_pomgreen">재원생 원서접수 시, 보호자 정보란에 입력하셨던 학부모님 성함과 휴대폰 번호가 정확히 일치</em>하여야 가입이 가능합니다.<br><span class="font_note">(원서접수의 부모님 성함과 다를 경우, 학원에 정보 변경을 요청하셔야 합니다.)</span></p>		            </div>
+		            <div class="join_bx">
+		            <input type="hidden" name="j_mem_kind" value="P">
+		                <ul class="join_input_area" id="join_input_area">
+		                    <li id="li_j_acid">
+	                            <h4>소속학원</h4>
+	                            <div class="input_bx">
+	                                <select name="j_acid" id="j_acid" onchange="js_j_acid()">
+	                                    <option value="">선택</option>
+	                                    <option value="N">포엠 센텀캠퍼스</option>
+	                                    <option value="K">포엠 지곡캠퍼스(아우름)</option>
+	                                    <option value="M">포엠 북구캠퍼스</option>
+
+	                                </select>
+	                            </div>
+	                        </li>
+		                    <li class="di_none">
+		                        <h4>아이디</h4>
+		                        <div class="input_bx">
+		                            <input type="text" name="j_userid" id="j_userid" attr_ok="N" tabindex="1" placeholder="6~15자의 영문 소문자, 숫자만 가능">
+		                            <div class="input_info_bx" id="nt_j_userid"></div>
+		                            <a href="javascript:js_clear('j_userid');" id="btn_x_j_userid" class="input_state btn_delete"><span></span><span></span></a>
+		                        </div>
+		                    </li>
+		                    <li class="di_none">
+		                        <h4>비밀번호</h4>
+		                        <div class="input_bx">
+		                            <input type="password" name="j_passwd" id="j_passwd" attr_ok="N" tabindex="2" placeholder="8~16자의 영문, 숫자, 특수문자 조합만 가능">
+		                            <div class="input_info_bx" id="nt_j_passwd"></div>
+		                            <a id="info_passwd_d" class="pw_result pw_danger">위험</a>
+		                            <a id="info_passwd_n" class="pw_result pw_normal">보통</a>
+		                            <a id="info_passwd_s" class="pw_result pw_safety">안전</a>
+		                        </div>
+		                    </li>
+		                    <li class="di_none">
+		                        <h4>비밀번호 확인</h4>
+		                        <div class="input_bx">
+		                            <input type="password" name="j_passwd_cf" id="j_passwd_cf" attr_ok="N" tabindex="3" placeholder="비밀번호 확인">
+		                            <div class="input_info_bx" id="nt_j_passwd_cf"></div>
+		                        </div>
+		                    </li>
+		                    <li class="di_none">
+		                        <h4>학생 이름</h4>
+		                        <div class="input_bx">
+		                            <input type="text" name="j_stdnm" id="j_stdnm" attr_ok="N" maxlength="5" tabindex="5" placeholder="최대 5자 가능">
+		                            <div class="input_info_bx" id="nt_j_stdnm"></div>
+		                            <a href="javascript:js_clear('j_stdnm');" id="btn_x_j_stdnm" class="input_state btn_delete"><span></span><span></span></a>
+		                        </div>
+		                    </li>
+		                    <li class="di_none">
+		                        <h4>학부모 이름</h4>
+		                        <div class="input_bx">
+		                            <input type="text" name="j_pnm" id="j_pnm" attr_ok="N" maxlength="5" tabindex="4" placeholder="한글만 입력, 최대 5자 가능">
+		                            <div class="input_info_bx" id="nt_j_pnm"></div>
+		                            <a href="javascript:js_clear('j_pnm');" id="btn_x_j_pnm" class="input_state btn_delete"><span></span><span></span></a>
+		                        </div>
+		                    </li>
+		                    		                    <li id="li_j_cel" class="di_none">
+		                        <h4>학부모 휴대폰번호</h4>
+		                        <div class="input_bx">
+		                            <div class="input_btn_bx clearfix">
+		                                <input type="text" name="j_cel" id="j_cel" attr_ok="N" tabindex="7" placeholder="(-)없이 숫자만 입력">
+		                                <a href="javascript:js_send_num();" class="input_btn btn btn_submit" tabindex="8">인증번호 받기</a>
+		                                <div class="input_info_bx" id="nt_j_cel"></div>
+		                            </div>
+		                            <div class="quote_phone">
+		                                <input type="text" name="j_injung_num" id="j_injung_num" attr_ok="N" tabindex="9" placeholder="인증번호 6자리">
+		                                <a id="div_time" class="phone_time"></a>
+		                            </div>
+		                            <div class="input_info_bx" id="nt_j_injung_num"></div>
+		                            <div class="btn_rea pt_10">
+		                                <a type="button" href="javascript:js_injung_num_check()" class="btn_type btn_w100 pomblue" tabindex="10"><span>인증하기</span></a>
+		                            </div>
+		                        </div>
+		                    </li>
+		                    <li class="di_none">
+		                        <h4>필수 약관 동의</h4>
+		                        <ul class="agree_bx">
+		                            <li>
+		                                <div class="checks">
+		                            	    <input type="checkbox" id="check_all" name="check_all" value="Y" onClick="js_check_all(this)" tabindex="11">
+		                                    <label for="check_all"></label>
+		                                </div>
+		                                <span class="font_cont">이용약관에 모두 동의합니다.</span>
+		                            </li>
+		                            <li>
+		                                <div class="agree_select">
+		                                	<div class="checks">
+		                                    	<input type="checkbox" id="checkagree" name="checkagree" value="Y" onclick="js_check()">
+		                                        <label for="checkagree"></label>
+		                                    </div>
+		                                    <span class="font_cont">이용약관<em>(필수)</em></span>
+		                                    <a href="javascript:divToggle('divagree');" class="agree_slide"><img src="{% static 'assets/img/btn_arrow_down.png' %}" alt=""></a>
+		                                </div>
+		                                <div class="agree_clause" id="divagree"></div>
+		                            </li>
+		                            <li>
+		                                <div class="agree_select">
+		                                	<div class="checks">
+		                                    	<input type="checkbox" id="checkprivacy" name="checkprivacy" value="Y" onclick="js_check()">
+		                                        <label for="checkprivacy"></label>
+		                                    </div>
+		                                    <span class="font_cont">개인정보 수집 및 이용<em>(필수)</em></span>
+		                                    <a href="javascript:divToggle('divprivacy');" class="agree_slide"><img src="{% static 'assets/img/btn_arrow_down.png' %}" alt=""></a>
+		                                </div>
+		                                <div class="agree_clause" id="divprivacy">
+		                                    </div>
+		                            </li>
+		                        </ul>
+		                    </li>
+		                </ul>
+		                <div class="btn_rea di_none" id="btn_rea">
+		                    <a type="button" href="javascript:js_join()" class="btn_type btn_w100 pomblue" tabindex="12"><span>회원 가입하기</span></a>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+
+
+{% endblock content %}
+

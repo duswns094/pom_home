@@ -1,0 +1,452 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 홈 {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<!-- Kakao -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=26fcdd4ccec1e7a10a52844265b37cd6"></script>
+
+
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>포엠학원에 오신것을 환영합니다</h1>
+      <h2></br>포엠학원은 <strong>양심, 진심, 자부심</strong>으로 교육합니다.</h2>
+      <a href="#about" class="btn-get-started scrollto">둘러보기</a>
+    </div>
+  </section><!-- End Hero -->
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>왜 포엠학원일까요?</h3>
+              <p>
+                올바른 방향이 아니면 가리키지 않습니다. </br>최고의 학습법이 아니면 가르치지 않습니다.</br>
+                실력과 경험을 갖춘 최고의 강사진이 학생의 </br>성적 상승을 위해
+                끊임없이 연구하는 곳, </br>포엠학원에서 당신의 오늘보다 더 나은 내일을 </br>얻어가시기 바랍니다.
+
+
+              </p>
+              <div class="text-center">
+                <a href="#branch" class="more-btn scrollto">문의하기 <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-data"></i>
+                    <h4>데이터 기반 </br>개별 맞춤형 학습</h4>
+                    <p>학생의 학습활동, 성적 데이터를 기반으로 학생이 올바른 </br>학습을 진행중인지 체크하고 </br>맞춤형 학습을 제공합니다</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-grid-alt"></i>
+                    <h4>성적 상승을 위한 다양한 부가 프로그램</h4>
+                    <p>학생의 부진한 부분을 보충할 수 있도록 정규수업과는 </br>차별화된 다양한 프로그램을 </br>기획하고 제공합니다</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-message-check"></i>
+                    <h4>전담 강사의 꼼꼼한 관리 및 확실한 피드백</h4>
+                    <p>수시 전화상담/위클리 리포트를 </br>통해 학부모님께서 믿고 </br>맡길 수 있는 학원으로 </br>인정받고 있습니다</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            <a href="https://www.youtube.com/watch?v=wJEGaouRTOc" class="glightbox play-btn mb-4"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>포엠학원에는 가르침의 철학이 있습니다</h3>
+            <p></p>
+
+            <div class="icon-box">
+              <div class="icon" style="font-family: 'Mochiy Pop P One', sans-serif; font-size: 20px;">良心</div>
+              <h4 class="title"><a href="">양심</a></h4>
+              <p class="description">
+                포엠은 올바른 학습 방향이 아니면 가리키지 않습니다.
+                </br>무조건적인 선행이나 많은 수업을 따라오게 하지 않습니다. 학생에게 꼭 필요한 수업만 들을 수 있도록 안내해 드립니다.
+              </p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon" style="font-family: 'Mochiy Pop P One', sans-serif; font-size: 20px;">眞心</div>
+              <h4 class="title">
+                <a href="">진심</a>
+              </h4>
+              <p class="description">
+                학생의 성적상승에 대한 열망은 곧 포엠학원의 열망과 같습니다.
+                </br>포엠은 학생들의 목표를 달성할 수 있도록 진심과 최선을 다해 가르칩니다.
+              </p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon" style="font-family: 'Mochiy Pop P One', sans-serif; font-size: 20px;">自負心</div>
+              <h4 class="title">
+                <a href="">자부심</a>
+              </h4>
+              <p class="description">
+                포엠은 최고의 강의라고 자부하는 마음으로 가르칠 수 있도록
+                </br>우수한 質의 수업을 위해 매 수업을 열과 성을 다해 준비하며, 학습법에 대해 끊임없이 노력하고 연구합니다.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+<!-- End About Section -->
+
+<!--    &lt;!&ndash; ======= Counts Section ======= &ndash;&gt;-->
+<!--    <section id="counts" class="counts">-->
+<!--      <div class="container">-->
+
+<!--        <div class="row">-->
+
+<!--          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">-->
+<!--            <div class="count-box">-->
+<!--              <i class="far fa-hospital"></i>-->
+<!--              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>-->
+<!--              <p>설립 지점</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-3 col-md-6">-->
+<!--            <div class="count-box">-->
+<!--              <i class="fas fa-chalkboard-teacher"></i>-->
+<!--              <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>-->
+<!--              <p>강사</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">-->
+<!--            <div class="count-box">-->
+<!--              <i class="fas fa-book"></i>-->
+<!--              <span data-purecounter-start="0" data-purecounter-end="55" data-purecounter-duration="1" class="purecounter"></span>-->
+<!--              <p>개설 강좌</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+
+
+<!--          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">-->
+<!--            <div class="count-box">-->
+<!--              <i class="fas fa-users"></i>-->
+<!--              <span data-purecounter-start="0" data-purecounter-end="1512" data-purecounter-duration="1" class="purecounter"></span>-->
+<!--              <p>재원생</p>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Counts Section &ndash;&gt;-->
+<!-- 포엠학원 소개 Section -->
+    <section id="history" class="history section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>포엠학원</h2>
+          <p>포엠학원은 <strong>올바른 방향으로 꾸준히 나아가는 것</strong>의 가치를 추구하며 지난 10년동안 학생들과 함께 성장해왔습니다. </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" style="text-align:center;">
+              <img src="{% static 'assets/img/history.png' %}" style="margin-top: 70px; max-width: 80%;">
+          </div>
+
+          <div class="col-lg-6">
+            <h3 class="history-title">연혁</h3>
+            <div class="history-item">
+              <h4>2014년</h4>
+              <h5>포항 유강 본점 설립</h5>
+            </div>
+
+            <div class="history-item">
+              <h4>2017년</h4>
+              <h5>포항 지곡점 설립</h5>
+              <h5>포항 아우름점 설립</h5>
+              <h5>포항 효자점 설립</h5>
+
+            </div>
+            <div class="history-item">
+              <h4>2018년</h4>
+              <h5>포항 북구점 설립</h5>
+            </div>
+            <div class="history-item">
+              <h4>2019년</h4>
+              <h5>포항 포엠플러스점 설립</h5>
+              <p>‘2019 대한민국 고객만족지수 1위’ 교육서비스(교육) 부문 수상<img src="{% static 'assets/img/award.png' %}" style="width:50px;"></p>
+            </div>
+            <div class="history-item">
+              <h4>2021년</h4>
+              <h5>부산 센텀점 설립</h5>
+
+            </div>
+        </div>
+
+      </div>
+      </div>
+    </section><!-- End 포엠학원 소개 Section -->
+
+<!-- ======= 강사진 소개 Section ======= -->
+    <section id="teachers" class="teachers">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>강사 라인업</h2>
+          <p></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="teachers-filters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-math">수학</li>
+              <li data-filter=".filter-eng">영어</li>
+              <li data-filter=".filter-kor">국어</li>
+              <li data-filter=".filter-sci">과학</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row teachers-container" data-aos="fade-up" data-aos-delay="200" id="js-load">
+
+          {% if teacher_list %}
+              {% for teacher in teacher_list %}
+                {% include 'snippets/card_teacher.html' with teacher=teacher %}
+              {% endfor %}
+
+          {% else %}
+            <div style="text-align:center;">
+              <h2>
+                생성된 선생님이 없습니다
+              </h2>
+            </div>
+          {% endif %}
+
+        </div>
+        <div id="js-btn-wrap" class="btn-wrap" style="text-align:center;"> <a href="javascript:;" class="button plus">더보기</a></div>
+      </div>
+    </section><!-- End teachers Section -->
+<!-- 설명회 Section -->
+<section id="presentations" class="presentations section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>설명회</h2>
+        </div>
+        <div class="sub_area">
+        <div class="list_pre">
+        	<ul>
+              {% if presentation_list %}
+                {% for presentation in presentation_list %}
+                   <li class="clearfix">
+                      {% include 'snippets/card_presentation.html' with presentation=presentation %}
+                   </li>
+                {% endfor %}
+              {% else %}
+                <div style="text-align:center;">
+                  <h2>
+                    생성된 설명회가 없습니다
+                  </h2>
+                </div>
+              {% endif %}
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</section>
+<!-- 학원생활 Section -->
+<section id="pomlife" class="pomlife section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>학원생활</h2>
+          <p>포엠학원의 더 많은 이야기와 수업정보는 밴드와 블로그를 통해 확인하실 수 있습니다. </p>
+        </div>
+      <div class="main_news">
+			<div class="inner scrollfade">
+
+				<div class="news">
+					<ul>
+                      {% if post_list %}
+                        {% for post in post_list %}
+                              {% include 'snippets/card_post.html' with post=post %}
+                        {% endfor %}
+                      {% else %}
+                        <div style="text-align:center;">
+                          <h2>
+                            최근 소식이 없습니다
+                          </h2>
+                        </div>
+                      {% endif %}
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+      </div>
+		<!-- //소식 -->
+</section>
+<!-- End 학원생활 Section -->
+
+<!-- ======= 지점별 오시는길 Section ======= -->
+    <section id="branch" class="branch section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>오시는 길</h2>
+          <p>포엠학원은 신뢰성 있는 교육 시스템과 서비스를 제공하기 위해 직영체제로 운영되고 있습니다.
+          </p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1" onclick="jigok_relayout()">포엠 지곡&아우름점</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2" onclick="centum_relayout()">포엠 센텀점</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3" onclick="bukgu_relayout()">포엠 북구점</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row gy-4">
+                  <div class="col-lg-6 details order-2 order-lg-1">
+                    <h3>포엠 지곡&아우름점</h3>
+                    <div class="info">
+                      <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Location:</h4>
+                        <p>경북 포항시 남구 지곡로 253 2층</p>
+                      </div>
+
+                      <div class="email">
+                        <i class="bi bi-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>master@pomedu.page</p>
+                      </div>
+
+                      <div class="phone">
+                        <i class="bi bi-phone"></i>
+                        <h4>Call:</h4>
+                        <p>054)273-9779</p>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-6 text-center order-1 order-lg-2">
+                    <div id="jigok" style="width:500px;height:400px;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row gy-4">
+                  <div class="col-lg-6 details order-2 order-lg-1">
+                    <h3>포엠 센텀점</h3>
+                    <div class="info">
+                      <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Location:</h4>
+                        <p>부산 해운대구 센텀2로 24 센텀다이아몬드 7층</p>
+                      </div>
+
+                      <div class="email">
+                        <i class="bi bi-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>master@pomedu.page</p>
+                      </div>
+
+                      <div class="phone">
+                        <i class="bi bi-phone"></i>
+                        <h4>Call:</h4>
+                        <p>051)747-3922</p>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-6 text-center order-1 order-lg-2">
+                    <div id="centum" style="width:500px;height:400px;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row gy-4">
+                  <div class="col-lg-6 details order-2 order-lg-1">
+                    <h3>포엠 북구점</h3>
+                    <div class="info">
+                      <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Location:</h4>
+                        <p>경북 포항시 북구 대곡로 47 2층</p>
+                      </div>
+
+                      <div class="email">
+                        <i class="bi bi-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>master@pomedu.page</p>
+                      </div>
+
+                      <div class="phone">
+                        <i class="bi bi-phone"></i>
+                        <h4>Call:</h4>
+                        <p>054)614-9777</p>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-6 text-center order-1 order-lg-2">
+                    <div id="bukgu" style="width:500px;height:400px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<script src="{% static 'assets/js/kakaomap.js' %}"></script>
+
+{% endblock content %}

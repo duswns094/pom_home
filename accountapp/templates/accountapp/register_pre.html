@@ -1,0 +1,39 @@
+{% extends "base_sub.html" %}
+{% load static %}
+
+{% block title %} 홈 {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <div class="login_wrap">
+    	<div class="sub_container">
+            <div class="sub_area">
+            	<div class="login_logo_box">
+                    <p class="font_h6">포엠학원 온라인 재원생서비스</p>
+                    <p><img src="{% static 'assets/img/logo/pom_logo.jpg' %}" alt="" class=""></p>
+					<p class="font_h2">등록하기</p>
+                </div>
+
+                <!-- join_center -->
+                <div class="join_center mt_40">
+                    <p class="cl_blackC txt-center">포엠학원 재원생과<br class="pc_none" /> 재원생의 학부모님만 등록이 가능합니다</p>
+                    <div class="join_bx">
+                        <ul class="register_pre_bx">
+                            <li class="wm_50"><a href="{% url 'accounts:register_students' %}">
+                                <div class="font_cont"><b>재원생</b><span>등록하기</span></div>
+                            </a></li>
+                            <li class="wm_50"><a href="{% url 'accounts:register_parents' %}">
+                                <div class="font_cont"><b>학부모</b><span>등록하기</span></div>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- join_center -->
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
