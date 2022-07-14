@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pomdatabase',
+        'NAME': 'pom_database',
         'USER': 'admin',
         'PASSWORD': 'vhdpagkrdnjs!',
         'HOST': 'mariadb',
