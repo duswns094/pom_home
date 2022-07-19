@@ -1,0 +1,25 @@
+{% block content %}
+
+<div class="modal fade" id="Presentation_Check_Modal" tabindex="-1" aria-labelledby="presentationcheckModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="presentationcheckModalLabel">설명회 예약 확인</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{% url 'presentations:presentation_apply_check' %}" method="get">
+                <div class="modal-body">
+                    <p>예약에 사용한 휴대폰 번호를 입력하세요</p>
+                    <input type="text", placeholder="010-0000-0000", class="form-control form-control-user", name="phone_num">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <input type="submit"  class="btn btn-primary">
+                </div>
+                <input type = "hidden" name = "presentation_pk" value = "{{ target_presentation.pk }}">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

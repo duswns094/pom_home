@@ -5,7 +5,7 @@
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope"></i> <a href="mailto:master@pomedu.page" >master@pomedu.page</a>
-        <i class="bi bi-phone"></i> 010-2029-4902
+        <i class="bi bi-phone"></i> 054-273-9779
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
         <a href="https://www.youtube.com/channel/UCg-0_alWZVPtlosSpzPK2Kg" class="youtube"><i class="bi bi-youtube"></i></a>
@@ -43,4 +43,15 @@
       </nav><!-- .navbar -->
 
     </div>
+
+    {% if messages %}
+      {% for message in messages %}
+      <div style="justify-content:center; display:flex;">
+        <div class="alert {{ message.tags }} fade show" role="alert" >
+            {{ message.message }}
+        </div>
+      </div>
+      {% endfor %}
+    {% endif %}
   </header><!-- End Header -->
+

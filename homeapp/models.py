@@ -28,17 +28,6 @@ class Teacher(models.Model):
     def __str__(self):
         return f'{self.name}'
 
-class Presentation(models.Model):
-    name = models.CharField(max_length=100, null=False)
-    image = models.ImageField(upload_to='presentation/', null=True, default='presentation/no_image.png')
-    time = models.CharField(max_length=100, null=False)
-    place = models.CharField(max_length=100, choices=branch_choices, null=False)
-    is_opened = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True, null=False, editable=True)
-
-    def __str__(self):
-        return f'{self.name}'
-
 class Post(models.Model):
     name = models.CharField(max_length=100, null=False)
     image = models.ImageField(upload_to='post/', null=True, default='post/no_image.png')

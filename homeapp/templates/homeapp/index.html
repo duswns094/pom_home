@@ -260,15 +260,15 @@
 <section id="presentations" class="presentations section-bg">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-Xtitle">
           <h2>설명회</h2>
         </div>
         <div class="sub_area">
         <div class="list_pre">
-        	<ul>
+        	<ul style="padding:0rem;">
               {% if presentation_list %}
                 {% for presentation in presentation_list %}
-                   <li class="clearfix">
+                   <li class="clearfix" >
                       {% include 'snippets/card_presentation.html' with presentation=presentation %}
                    </li>
                 {% endfor %}
@@ -374,7 +374,7 @@
                     </div>
                   </div>
                   <div class="col-lg-6 text-center order-1 order-lg-2">
-                    <div id="jigok" style="width:500px;height:400px;"></div>
+                    <div id="jigok" style="width:100%;height:400px;"></div>
                   </div>
                 </div>
               </div>
@@ -404,7 +404,7 @@
                     </div>
                   </div>
                   <div class="col-lg-6 text-center order-1 order-lg-2">
-                    <div id="centum" style="width:500px;height:400px;"></div>
+                    <div id="centum" style="width:100%;height:400px; "></div>
                   </div>
                 </div>
               </div>
@@ -434,7 +434,7 @@
                     </div>
                   </div>
                   <div class="col-lg-6 text-center order-1 order-lg-2">
-                    <div id="bukgu" style="width:500px;height:400px;"></div>
+                    <div id="bukgu" style="width:100%;height:400px;"></div>
                   </div>
                 </div>
               </div>

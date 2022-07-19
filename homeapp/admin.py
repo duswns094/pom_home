@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from homeapp.models import Teacher, Presentation, Post
+from homeapp.models import Teacher, Post
 
 
 class TeacherAdmin(admin.ModelAdmin):
@@ -10,11 +10,6 @@ class TeacherAdmin(admin.ModelAdmin):
 
 admin.site.register(Teacher, TeacherAdmin)
 
-class PresentationAdmin(admin.ModelAdmin):
-    list_display = ['pk', 'name', 'is_opened','created_at']
-    list_display_links = ['name']
-
-admin.site.register(Presentation, PresentationAdmin)
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ['pk', 'name', 'created_at','url']

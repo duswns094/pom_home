@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 홈 {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style type="text/css">
+
+.sub_container.full_bg_wrap{padding: 59px 0 0px;}
+
+.evt_wrap {width:100%; position:relative ;}
+.sub_pf_pos {position:relative; max-width:1200px; width:1200px;  margin: 0 auto}
+.sub_pf_pos > img{ width:100%;}
+.sub_pf_view {position:absolute;top:0;left:0;width:100%;height:100%; z-index:1;}
+.pf_btn {position:absolute;z-index:2;display:block;overflow:hidden;cursor:pointer;text-indent:-5600em;}
+
+.hidden {position:absolute;left:-1000%;top:0;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden;visibility:hidden;}
+
+/*타이틀  */
+.sub_pf_titlewrap{ center no-repeat; background-color:#ededed; margin-top:40px;}
+.sub_pf_title .sub_pf_view{}
+.sub_pf_title{}
+
+/*sub_pf_wrap1 : 일정안내 */
+
+.sub_pf_wrap1{ background-color:#ededed ;}
+.sub_pf_section1{ background-color:#ededed ; }
+
+/*table*/
+.timetable{padding:30px 0; background:#fff; max-width:1000px; margin:30px auto;}
+.timetable dl{ width:100%; max-width:450px; margin:0 auto; padding:20px 0;border-bottom:1px solid #cccccc; display:flex;flex-wrap:nowrap; flex-direction:row; align-items:flex-start; justify-content:flex-start; }
+.timetable dl:last-child{ border-bottom:0;}
+.timetable dl dt, .timetable dl dd{ display:block;  line-height:1.865rem; font-size:1.25rem; }
+.timetable dl dt{ padding:5px 10px; background:#a5a5a5; color:#fff; border-radius:20px; font-size:1.125rem;  line-height:1.125rem;}
+.timetable dl dd{ padding-left:15px; position:relative;}
+.timetable dl dd em{ color:#00b2ad; font-weight:bold;}
+.timetable dl dd a.map{ position:absolute; right:-120px; top:-5px; display:block; padding:5px 20px; background:#d3b88d; color:#fff; border-radius:20px; font-size:1.125rem; }
+
+.sec_map_txt{ padding-left:; font-size: 1.5rem; text-align:center;}
+.sec_map_txt a.map{ display:inline-block; padding:5px 20px; background:#d3b88d; color:#fff; border-radius:20px; font-size:1.125rem; margin-left:20px;}
+
+.sec_map_btn{ width:100%; max-width:1000px; margin:30px auto; display:flex; flex-wrap:nowrap; flex-direction:row; align-items:center; justify-content:space-between;}
+
+.sec_map_btn li{ width:49.5%}
+.sec_map_btn li a{ cursor:pointer; width:100%; background:#2A3B55; font-size:1.5rem; text-align:center; padding:20px; color:#000; font-weight:500;}
+.sec_map_btn li:last-child a{ background:#727272; color:#fff; }
+
+
+.sec_stxt{ padding-left:100px; padding-bottom:60px;}
+
+
+/*sub_pf_wrap2 : 내용안내 */
+.sub_pf_wrap2{   background-color:#fff; }
+.sub_pf_section2{  }
+.sub_pf_section2 .sec_tit img{ width:100%;}
+.poster{ width:50%;  item-align: center; margin-bottom: 2rem;}
+
+
+
+@media all and (max-width:768px){
+
+	.sub_pf_pos{ width:100%;}
+    .sub_pf_titlewrap{ center no-repeat; background-color:#ededed;}
+	/*sub_pf_wrap1 : 일정안내 */
+	.sub_pf_wrap1{ background-color:#ededed ;}
+	.sub_pf_section1 .sec_tit img{ width:100%; }
+
+	.sec_map_txt{ font-size:1.125rem;}
+	.sec_map_txt a.map{ margin-left:5px; padding:5px 10px; font-size:1.0rem;}
+
+	.sec_map_btn{ margin:20px 0px; padding:0 10px;}
+	.sec_stxt{ padding:0 10px 30px 10px; font-size:0.875rem;}
+
+
+
+	.timetable{ width:calc(100% - 20px); padding:15px 10px; margin:20px 10px;}
+	.timetable dl{ padding:10px;}
+	.timetable dl dt, .timetable dl dd{ font-size:1.125rem;}
+	.timetable dl dd a.map{padding:3px 10px; font-size:1.0rem; top:-2px;right:-78px;}
+
+	.timetable dl dt{ min-width:48px;}
+	.timetable dl dd{ padding-left:7px;}
+
+}
+
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<!--WEB page  -->
+    <section class="sub_container full_bg_wrap">
+        <div class="evt_wrap">
+
+        	<!-- 타이틀  -->
+            <div class="sub_pf_titlewrap">
+                <div class="sub_pf_pos sub_pf_title">
+                    <img class="m_none" src="{{ target_presentation.title_img.url }}" />
+                    <img class="pc_none" src="{{ target_presentation.title_img.url }}" />
+               	</div>
+           	</div>
+            <!-- //타이틀 -->
+
+            <!-- sub_pf_wrap1 : 일정 안내 -->
+            <div class="sub_pf_wrap1">
+
+            	<div class="sub_pf_pos sub_pf_section1">
+
+                	<div class="sec_tit">
+                    	<img class="m_none" src="{% static 'assets/img/presentation_schedule.png' %}" />
+                    	<img class="pc_none" src="{% static 'assets/img/presentation_schedule.png' %}" />
+                    </div>
+
+                    <div class="timetable"  >
+                    	<dl>
+                        	<dt>일시</dt>
+                            <dd>{{ target_presentation.time}}</dd>
+                        </dl>
+                        <dl>
+                        	<dt>장소</dt>
+                            <dd>{{ target_presentation.place}}<a class="map" href="{% url 'home:home' %}#branch" target='_blank'>오시는길</a></dd>
+                        </dl>
+                    </div>
+                    <ul class="sec_map_btn" style="padding:0rem;">
+
+                    	<li><a data-bs-toggle="modal" data-bs-target="#Presentation_Apply_Modal"
+                                                    data-bs-whatever="@mdo" style="color:#fff">예약하기</a></li>
+                        <li><a data-bs-toggle="modal" data-bs-target="#Presentation_Check_Modal"
+                                                    data-bs-whatever="@mdo">예약확인</a></li>
+
+                    </ul>
+                    {% include 'presentationapp/presentation_apply_create.html' with target_presentation=target_presentation %}
+                    {% include 'presentationapp/presentation_apply_check.html' with target_presentation=target_presentation %}
+                    <p class="sec_stxt"><span class="txt-red">* 예약은  선착순으로 마감되며, 1인 1석 예약 부탁드립니다.</span><br />
+                    * 예약하신 내용을 변경/취소 시 반드시 학원으로 연락 주시기 바랍니다.<br />
+                    * 설명회 진행 중에는 마스크 착용을 하셔야 합니다.</p>
+                </div>
+
+
+            </div>
+            <!-- sub_pf_wrap1 : 일정 안내 -->
+
+            <!-- sub_pf_wrap2 : 내용 안내 -->
+            <div class="sub_pf_wrap2">
+            	<div class="sub_pf_pos sub_pf_section2">
+                	<div class="sec_tit">
+                    	<img class="m_none" src="{% static 'assets/img/presentation_content.png' %}" />
+                    	<img class="pc_none" src="{% static 'assets/img/presentation_content.png' %}" />
+                    </div>
+                    <div style="text-align:center;">
+                        <a href="{{ target_presentation.poster.url }}" class="teachers-lightbox" >
+                            <img class= "m_none poster" src="{{ target_presentation.poster.url }}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- sub_pf_wrap2 : 일정 안내 -->
+        </div>
+    </section>
+<!--// WEB page-->
+
+
+
+
+{% endblock content %}

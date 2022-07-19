@@ -8,9 +8,10 @@ from django.urls import reverse
 
 
 # Create your views here.
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 
-from homeapp.models import Teacher, Presentation, Post
+from homeapp.models import Teacher, Post
+from presentationapp.models import Presentation
 
 
 class IndexView(TemplateView):
@@ -27,4 +28,3 @@ class IndexView(TemplateView):
                    }
         return context
 
-# Create your views here

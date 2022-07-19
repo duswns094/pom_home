@@ -320,3 +320,8 @@
 //    $(teacher_list + ":lt(" + teacher_total_cnt + ")").addClass("active");
 //
 //};
+window.setTimeout(function() {
+    $('.alert').fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 3000);
