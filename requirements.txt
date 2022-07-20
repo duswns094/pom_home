@@ -4,13 +4,11 @@ diff-match-patch==20200713
 Django==3.2
 django-environ==0.9.0
 django-import-export==2.8.0
-django-phonenumber-field==6.3.0
 et-xmlfile==1.1.0
 gunicorn==20.1.0
 MarkupPy==1.14
 odfpy==1.4.1
 openpyxl==3.0.10
-phonenumberslite==8.12.51
 Pillow==9.2.0
 pytz==2022.1
 PyYAML==6.0
